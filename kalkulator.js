@@ -1,7 +1,29 @@
 
 function hitungKalkulator(angka1, operator, angka2) {
   let hasil;
-// code here
+  switch (operator){
+    case"+":
+    hasil = angka1 + angka2;
+    break;
+    case"-":
+    hasil = angka1 - angka2;
+    break;
+    case"*":
+    hasil = angka1 * angka2;
+    break;
+    case"/":
+    if(angka2 == 0){
+      return "Tidak bisa membagi dengan angka 0!";
+    }
+    else {
+      hasil = angka1 / angka2;
+    break;
+    }
+    default:
+    return "Tidak ada operator lain";
+  }
+  return `Hasil dari ${angka1} ${operator} ${angka2} adalah ${hasil}`;
+  }
 }
 
 console.log("=== Demo Kalkulator Backend ===");
